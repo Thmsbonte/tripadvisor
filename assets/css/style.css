@@ -1,0 +1,23 @@
+/* GENERAL */
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  margin-top: 10px;
+}
+
+#header-left {
+}
+
+#header-left img {
+  height: 40px;
+  width: 190px;
+}
+
+#header-right {
+}
