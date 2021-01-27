@@ -117,19 +117,25 @@ header button:hover {
 
 /* SECTION N°1 */
 
-#section1 h1 {
+h1 {
   font-size: 54px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 9px;
 }
 
-#section1 h1 span {
+h1 span {
   color: #fe5d5d;
 }
 
-#menu-main {
+.menu-main {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  z-index: 1;
+  top: 0px;
+  background-color: white;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
 
 main nav a {
@@ -155,7 +161,7 @@ main nav a:hover {
 #section1-pictures {
   display: flex;
   height: 430px;
-  margin-top: 26px;
+  margin-top: 10px;
   justify-content: space-between;
 }
 
