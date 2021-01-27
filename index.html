@@ -13,14 +13,81 @@
     <title>Tripadvisor</title>
   </head>
   <body>
-    <header>
+    <header class="container">
       <div id="header-left">
         <img
           src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
           alt="logo-tripadvisor"
         />
+        <form action="">
+          <label for="search"><input type="text" size="35" /></label>
+        </form>
       </div>
-      <div id="header-right"></div>
+      <div id="header-right">
+        <ul id="menu-header">
+          <li>Publier</li>
+          <li>Alertes</li>
+          <li>Voyages</li>
+        </ul>
+        <ul id="connection-button">
+          <li>Connectez-vous</li>
+        </ul>
+      </div>
     </header>
+    <main class="container">
+      <section id="section1">
+        <h1><span>Explorez</span> Paris</h1>
+        <ul id="menu-main">
+          <li>Conseils de voyages</li>
+          <li>Hôtels</li>
+          <li>Location de vacances</li>
+          <li>Activités</li>
+          <li>Restaurants</li>
+          <li>Forums de voyage</li>
+          <li>Plus</li>
+        </ul>
+        <div id="section1-pictures">
+          <div id="section1-pictures-left">
+            <img src="./assets/img/photo1.jpg" alt="photo-paris" />
+          </div>
+          <div id="section1-pictures-right">
+            <img src="./assets/img/photo2.jpg" alt="photo-paris" /><img
+              src="./assets/img/photo3.jpg"
+              alt="photo-paris"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="section2">
+        <div id="section2-text-left">
+          <h2>La ville lumière éblouit en tout point</h2>
+          <p>
+            Aucun autre endroit au monde ne fait autant rêver que Paris. La
+            ville séduit par son art, son architecture, sa culture et sa
+            cuisine, mais il y a aussi des merveilles plus discrètes qui
+            n’attendent qu’à être explorées : les ruelles pavées pittoresques,
+            les pâtisseries au coin de la rue et les petits bistrots douillets
+            qui vous invitent à boire un verre de beaujolais. Préparez-vous à
+            vous approprier Paris.
+          </p>
+        </div>
+        <div id="section2-block-right">
+          <div id="create-trip">
+            <h3>Commencez à vous organiser !</h3>
+            <p>
+              Créez un voyage pour enregistrer et organiser toutes vos idées et
+              les visualiser sur une carte.
+            </p>
+            <ul id="create-trip-button">
+              <li>Créez un voyage</li>
+            </ul>
+          </div>
+          <img src="./assets/img/map.png" alt="" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Le Reacteur © 2021</p>
+    </footer>
   </body>
 </html>
