@@ -13,6 +13,7 @@ body {
 a {
   text-decoration: none;
   color: #545454;
+  cursor: pointer;
 }
 
 a:hover {
@@ -314,6 +315,11 @@ main nav a:hover {
 
 /* SECTION N°3 */
 
+#section3 {
+  padding-bottom: 100px;
+  border-bottom: solid 1px black;
+}
+
 .section-title {
   display: flex;
   justify-content: center;
@@ -358,6 +364,134 @@ main nav a:hover {
 
 .travel-advice:not(:last-child) {
   margin-right: 16px;
+}
+
+/* SECTION N°4 */
+
+#section4 {
+  padding-bottom: 100px;
+  border-bottom: solid 1px black;
+}
+
+.dont-miss-row {
+  height: 330px;
+  margin-top: 50px;
+  display: flex;
+}
+
+.dont-miss-row article {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.dont-miss-row article h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.dont-miss-row article p {
+  font-size: 18px;
+  font-weight: 100;
+  margin-bottom: 15px;
+  line-height: 22px;
+}
+
+.dont-miss-row article a {
+  font-size: 14px;
+}
+
+.carousel-arrow-1 {
+  margin-right: -20px;
+  z-index: 1;
+}
+.carousel-arrow-2 {
+  margin-left: -20px;
+  margin-right: -20px;
+  z-index: 1;
+}
+
+.carousel-arrow-1 i,
+.carousel-arrow-2 i {
+  border: solid 2px black;
+  padding: 10px;
+  border-radius: 50%;
+  margin-top: 100px;
+  background-color: white;
+}
+
+.carousel-arrow-1 i:hover,
+.carousel-arrow-2 i:hover {
+  background-color: black;
+  color: white;
+}
+
+.carousel {
+  flex: 2.5;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.carousel-block {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.carousel-block:not(:last-child) {
+  margin-right: 16px;
+}
+
+.carousel-picture {
+  display: flex;
+  height: 205px;
+  position: relative;
+}
+
+.carousel-picture i {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  right: 7px;
+  margin-top: 7px;
+}
+.carousel-picture i:hover {
+  background-color: white;
+}
+
+.carousel-picture img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.carousel-picture:hover {
+  opacity: 0.8;
+}
+
+.carousel-description {
+  height: 100%;
+  padding-top: 5px;
+}
+
+.carousel-description p {
+  font-weight: 100;
+  font-size: 14px;
+  margin-top: 5px;
+  line-height: 18px;
+}
+
+.carousel-advice {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-advice i {
+  color: #04a96c;
+  margin-right: 3px;
 }
 
 /* FOOTER */
