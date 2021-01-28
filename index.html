@@ -42,9 +42,13 @@
         </button>
       </div>
     </header>
+
     <!-- MAIN CONTENT -->
     <main class="container">
+
+      <!-- Title & Navigation bar -->
         <h1><span>Explorez</span> Paris</h1>
+        <!-- width > 1024px -->
         <nav class="menu-main">
           <a><span>Conseils de voyages</span><i class="far fa-flag"></i></a>
           <a><span>Hôtels</span><i class="fas fa-bed"></i></a>
@@ -57,7 +61,25 @@
           <a><span>Forums de voyage</span><i class="far fa-window-restore"></i></a>
           <a><span>Plus</span><i class="fas fa-ellipsis-h"></i></a>
         </nav>
-        <div id="section1-pictures">
+        <!-- 7769px < width < 1024px -->
+        <nav class="menu-main responsive-1024">
+          <a><span>Conseils de voyages</span><i class="far fa-flag"></i></a>
+          <a><span>Hôtels</span><i class="fas fa-bed"></i></a>
+          <a><span>Location de vacances</span><i class="fas fa-home"></i></a>
+          <a
+            ><span>Activités</span></i
+            ><i class="far fa-bookmark"></i
+          ></a>
+        </nav>
+        <nav class="menu-main">
+          <a><span>Restaurants</span><i class="fas fa-utensils"></i></a>
+          <a><span>Forums de voyage</span><i class="far fa-window-restore"></i></a>
+          <a><span>Vols</span><i class="far fa-window-restore"></i></a>
+          <a><span>Plus</span><i class="fas fa-ellipsis-h"></i></a>
+        </nav>
+
+      <!-- Pictures -->
+      <div id="section1-pictures">
           <div id="section1-pictures-left">
             <img src="./assets/img/photo1.jpg" alt="photo-paris" />
             <button><i class="far fa-image fa-lg"></i> <span>Toutes les photos</span></button>
@@ -68,13 +90,17 @@
               alt="photo-paris"
             />
           </div>
-        </div>
+      </div>
+  
+      <!-- Tree structure -->
       <div class="tree-structure">
-        <div><a href="#">Europe</a><span>></span><a href="#">France</a><span>></span><a href="#">Ile-de-France</a><span>></span><a href="#">Paris</a></div>
+        <div><a href="#">Europe</a><span>></span><a href="#">France</a><span>></span><a href="#">Ile-de-France</a><span>></span><a href="#">Paris</a><i class="fas fa-sort-down"></i></div>
         <div><p>Visiter : Paris</p></div>
       </div>
-      <section id="section2">
-        <div id="section2-text-left">
+
+      <!-- City Description -->
+      <section class="description">
+        <div class="col-1">
           <h2>La ville lumière éblouit en tout point</h2>
           <p>
             Aucun autre endroit au monde ne fait autant rêver que Paris. La
@@ -86,24 +112,30 @@
             vous approprier Paris.
           </p>
         </div>
-        <div id="section2-block-right">
-          <div id="create-trip">
+        <div class="col-2">
+          <div class="create-trip">
             <h3>Commencez à vous organiser !</h3>
             <p>
               Créez un voyage pour enregistrer et organiser toutes vos idées et
               les visualiser sur une carte.
             </p>
-            <button id="create-trip-button">
+            <button>
               <span>Créez un voyage</span>
             </button>
           </div>
           <img src="./assets/img/map.png" alt="" />
         </div>
+      
       </section>
-      <section id="section3">
+      
       <div class="section-title">
+        <div></div>
         <h2>Conseils de voyages</h2>
+        <div></div>
       </div>
+
+      <!-- Travel advice -->
+      <section class="advices">
       <div class="display-more">
         <a href="#">Tout afficher</a>
       </div>
@@ -113,13 +145,18 @@
         <div class="travel-advice"><img src="./assets/img/glass.svg" alt=""><a href="#">Coutumes locales</a></div>
         <div class="travel-advice"><img src="./assets/img/light-bulb.svg" alt=""><a href="#">Conseils de pros</a></div>
       </div>
-    </section>
-    <section id="section4">
+      </section>
+
       <div class="section-title">
+        <div></div>
         <h2>Immanquable à Paris</h2>
+        <div></div>
       </div>
+
+      <!-- Unmissable section -->
+      <section class="unmissable">
       <!-- Carousel n°1 -->
-      <div class="dont-miss-row">
+      <div class="unmissable-row">
         <article>
           <h3>Se divertir</h3>
           <p>Des lieux à voir, des rues à explorer et des expériences emblématiques à Paris.</p>
@@ -213,7 +250,7 @@
         </div>
       </div>
       <!-- Carousel n°2 -->
-      <div class="dont-miss-row">
+      <div class="unmissable-row">
         <article>
           <h3>Se reposer</h3>
           <p>Un mélange de charmes, de symboles et de modernité</p>
@@ -306,8 +343,8 @@
           <i class="fas fa-arrow-right fa-lg"></i>
         </div>
       </div>
-      <!-- Carousel n°3 -->
-      <div class="dont-miss-row">
+      <!-- Carousel n°3-->
+      <div class="unmissable-row">
         <article>
           <h3>Se restaurer</h3>
           <p>Bistrots et bar typiques, et plus encore à Paris</p>
@@ -400,7 +437,50 @@
           <i class="fas fa-arrow-right fa-lg"></i>
         </div>
       </div>
-    </section>
+      </section>
+
+      <div class="section-title">
+        <div></div>
+        <h2>Guide des voyageurs</h2>
+        <div></div>
+      </div>
+
+      <!-- Traveler guide -->
+<section class="traveler-guide">
+  <div class="block">
+    <div class="picture"><img src="./assets/img/munument-et-musées.jpg" alt="Monuments"></div>
+    <div class="text-description">
+      <h6>Par <a>Topito</a></h6>
+      <h5>Les 10 monuments et musées de Paris à faire</h5>
+      <p>Guide du vrai touriste à Paris</p>
+      <i class="fas fa-heart"></i>
+      <p>10 articles</p>
+    </div>
+    <img src="./assets/img/topito-com.jpg" alt="topito">
+  </div>
+  <div class="block">
+    <div class="picture"><img src="./assets/img/catacombes.jpg" alt="catacombes"></div>
+    <div class="text-description">
+      <h6>Par <a>Topito</a></h6>
+      <h5>Les 10 monuments et musées de Paris à faire</h5>
+      <p>Guide du vrai touriste à Paris</p>
+      <i class="fas fa-heart"></i>
+      <p>10 articles</p>
+    </div>
+    <img src="./assets/img/topito-com.jpg" alt="topito">
+  </div>
+  <div class="block">
+    <div class="picture"><img src="./assets/img/atelier.jpg" alt="eatwith"></div>
+    <div class="text-description">
+      <h6>Par <a>Topito</a></h6>
+      <h5>Les 10 monuments et musées de Paris à faire</h5>
+      <p>Guide du vrai touriste à Paris</p>
+      <i class="fas fa-heart"></i>
+      <p>10 articles</p>
+    </div>
+    <img src="./assets/img/eatwith.jpg" alt="topito">
+  </div>
+</section>
     </main>
     <!-- FOOTER -->
     <footer>

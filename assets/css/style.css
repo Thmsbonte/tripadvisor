@@ -16,8 +16,8 @@ a {
   cursor: pointer;
 }
 
-a:hover {
-  text-decoration: underline;
+.responsive-1024 {
+  display: none;
 }
 
 /* HEADER */
@@ -141,7 +141,6 @@ h1 span {
 main nav a {
   display: flex;
   justify-content: space-between;
-
   flex: 1;
   padding: 20px;
   border: solid 1px;
@@ -149,7 +148,7 @@ main nav a {
 }
 
 main nav a:not(:last-child) {
-  margin-right: 20px;
+ margin-right: 20px;
 }
 
 main nav a:hover {
@@ -239,45 +238,66 @@ main nav a:hover {
   font-weight: 100;
 }
 
+.tree-structure > div:first-child {
+  display: flex;
+  justify-content: center;
+}
+
 .tree-structure span {
   margin: 0 5px;
 }
 
-/* SECTION N°2 */
-#section2 {
+.tree-structure i {
+  margin-left: 5px;
+  margin-top: -1px;
+  cursor: pointer;
+}
+
+.tree-structure i:hover {
+  color: #6d6a6a;
+}
+
+.tree-structure a:hover {
+  text-decoration: underline;
+  color: #6d6a6a;
+}
+
+/* SECTION DESCRIPTION*/
+.description {
   display: flex;
+  height: 424px;
   margin-top: 50px;
   justify-content: space-between;
-  border-bottom: solid 1px black;
-  padding-bottom: 95px;
+  padding-bottom: 90px;
 }
-#section2-text-left {
+.description .col-1 {
   width: 50%;
 }
 
-#section2-text-left h2 {
+.description .col-1 h2 {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 14px;
 }
 
-#section2-text-left p {
+.description .col-1 p {
   font-weight: 100;
   margin-bottom: 14px;
   line-height: 20px;
   font-size: 16px;
 }
 
-#section2-block-right {
-  height: 424px;
-  width: 525px;
+.description .col-2 {
+  height: 100%;
+  width: 50%;
+  padding-left: 125px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-#section2-block-right div {
+.description .col-2 div {
   background-color: #fe5d5d;
   height: 234px;
   border-top-left-radius: 10px;
@@ -285,7 +305,7 @@ main nav a:hover {
   padding: 32px;
 }
 
-#section2-block-right img {
+.description .col-2 img {
   display: flex;
   height: 190px;
   object-fit: cover;
@@ -293,19 +313,19 @@ main nav a:hover {
   border-bottom-right-radius: 10px;
 }
 
-#create-trip h3 {
+.create-trip h3 {
   font-size: 32px;
   margin-bottom: 20px;
 }
 
-#create-trip p {
+.create-trip p {
   font-weight: 100;
   line-height: 20px;
   font-size: 16px;
   margin-bottom: 20px;
 }
 
-#create-trip-button {
+.create-trip button {
   border: none;
   padding: 20px;
   background-color: black;
@@ -314,29 +334,34 @@ main nav a:hover {
   font-size: 16px;
 }
 
-#create-trip-button:hover {
+.create-trip button:hover {
   background-color: #333333;
   cursor: pointer;
 }
 
-/* SECTION N°3 */
-
-#section3 {
-  padding-bottom: 100px;
-  border-bottom: solid 1px black;
-}
+/* SECTION TITLE */
 
 .section-title {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.section-title div {
+  border-top: solid 1px black;
+  flex: 1;
 }
 
 .section-title h2 {
-  margin-top: -15px;
   font-size: 28px;
   background-color: white;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 20px;
+}
+
+/* TRAVEL ADVICES */
+
+.advices {
+  padding-bottom: 100px;
 }
 
 .display-more {
@@ -345,6 +370,10 @@ main nav a:hover {
   font-size: 14px;
   margin-top: 40px;
   margin-bottom: 30px;
+}
+
+.display-more a:hover {
+  text-decoration: underline;
 }
 
 .travel-advices {
@@ -364,6 +393,12 @@ main nav a:hover {
   padding-right: 30px;
 }
 
+.travel-advice:hover {
+  border: 2px solid #999999;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .travel-advice img {
   height: 100%;
 }
@@ -372,38 +407,43 @@ main nav a:hover {
   margin-right: 16px;
 }
 
-/* SECTION N°4 */
+/* UNMISSABLE */
 
-#section4 {
-  padding-bottom: 100px;
-  border-bottom: solid 1px black;
+.unmissable {
+  padding-bottom: 50px;
 }
 
-.dont-miss-row {
+.unmissable-row {
   height: 330px;
   margin-top: 50px;
   display: flex;
 }
 
-.dont-miss-row article {
+.unmissable-row article {
   flex: 1;
   padding-right: 20px;
+  height: 100%;
 }
 
-.dont-miss-row article h3 {
+.unmissable-row article h3 {
   font-size: 24px;
   margin-bottom: 25px;
 }
 
-.dont-miss-row article p {
+.unmissable-row article p {
   font-size: 18px;
   font-weight: 100;
   margin-bottom: 15px;
   line-height: 22px;
 }
 
-.dont-miss-row article a {
+.unmissable-row article a {
   font-size: 14px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .carousel-arrow-1 {
@@ -432,25 +472,28 @@ main nav a:hover {
 }
 
 .carousel {
-  flex: 2.5;
+  flex: 3;
+  height: 100%;
   display: flex;
   overflow: hidden;
   overflow-x: scroll;
 }
 
 .carousel-block {
-  width: 310px;
+  height: 100%;
+  width: calc(100% / 3 - 32px / 3);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
 }
 
 .carousel-block:not(:last-child) {
-  margin-right: 16px;
+  padding-right: 16px;
 }
 
 .carousel-picture {
   display: flex;
+  width: 100%;
   height: 205px;
   position: relative;
 }
@@ -500,6 +543,97 @@ main nav a:hover {
   margin-right: 3px;
 }
 
+/* TRAVELER GUIDE */
+
+.traveler-guide {
+  display: flex;
+  margin-top: 50px;
+}
+
+.traveler-guide .block {
+  height: 520px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.traveler-guide .block:not(:last-child) {
+  margin-right: 48px;
+}
+
+.traveler-guide .picture {
+  height: 222px;
+  width: 100%;
+}
+
+.traveler-guide .picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.traveler-guide .picture img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.traveler-guide .text-description {
+  width: 100%;
+  flex: 1;
+  background-color: #f9f1ec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.traveler-guide .text-description h6 {
+  margin-top: 48px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.traveler-guide .text-description h5 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.traveler-guide .text-description h5:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.traveler-guide .text-description p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.traveler-guide .text-description p:last-child {
+  font-size: 16px;
+}
+
+.traveler-guide .text-description i {
+  color: #fe5d5d;
+  margin-top: 20px;
+}
+
+.traveler-guide .block > img {
+  position: absolute;
+  border-radius: 50%;
+  height: 72px;
+  top: 190px;
+  left: 162px;
+}
+
+.traveler-guide .block > img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 /* FOOTER */
 footer {
   height: 100px;
@@ -514,4 +648,21 @@ footer p {
   font-weight: 100;
   line-height: 20px;
   font-size: 16px;
+}
+
+@media (max-width: 1328px) {
+}
+
+@media (max-width: 1024px) {
+  .visible-1024 {
+    display: flex;
+  }
+
+  .container {
+    width: auto;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+@media (max-width: 768px) {
 }
