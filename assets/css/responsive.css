@@ -1,0 +1,99 @@
+.hidden-wide {
+  display: none;
+}
+
+@media (max-width: 1328px) {
+  .container {
+    width: auto;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .hidden-wide {
+    display: flex;
+  }
+  .menu-main {
+    flex-wrap: wrap;
+  }
+  .menu-main a {
+    flex: none;
+    width: calc(25% - 60px / 4);
+  }
+  main nav a:not(:last-child) {
+    margin-right: 0;
+  }
+  .menu-main a:not(:nth-child(4n)) {
+    margin-right: 20px;
+  }
+  #section1-pictures {
+    height: 350px;
+  }
+  #section1-pictures-right {
+    width: 402px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+  .description .col-1 {
+    flex: none;
+    margin-bottom: 30px;
+  }
+  .description .col-2 {
+    flex-direction: row;
+    padding-left: 0;
+  }
+  .description .col-2 .create-trip {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    flex: none;
+    width: 50%;
+  }
+  .description .col-2 .description-picture {
+    border-top-right-radius: 10px;
+    flex: none;
+    width: 50%;
+  }
+
+  .carousel {
+  }
+
+  .carousel-block {
+    width: calc(100% / 2 - 16px / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-768 {
+    display: none;
+  }
+  #section1-pictures {
+    height: 276px;
+  }
+
+  #section1-pictures-right {
+    width: 240px;
+  }
+
+  .travel-advices {
+    flex: none;
+    flex-wrap: wrap;
+  }
+
+  .travel-advice {
+    box-sizing: border-box;
+    flex: none;
+    width: calc(50% - 16px);
+    justify-content: space-between;
+  }
+
+  .travel-advice:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .carousel-picture {
+    height: 150px;
+  }
+}

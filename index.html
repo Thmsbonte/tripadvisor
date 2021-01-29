@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <!-- HEAD -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,8 +9,10 @@
       src="https://kit.fontawesome.com/3ceb7f9659.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/main.js"></script>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
       rel="stylesheet"
@@ -17,6 +20,12 @@
     <title>Tripadvisor</title>
   </head>
   <body>
+    <!-- MODAL -->
+    <div class="modal hidden">
+      <form action="submit">
+        <i class="fas fa-times fa-lg" id="close-login-form"></i>
+      </form>
+    </div>
     <!-- HEADER -->
     <header class="container">
       <div id="header-left">
@@ -32,12 +41,12 @@
         <nav>
           <a
             ><i id="icon-plus" class="fas fa-plus fa-xs"></i
-            ><span>Publier</span></a
+            ><span class="hidden-768">Publier</span></a
           >
-          <a><i class="far fa-bell fa-lg"></i> <span>Alertes</span></a>
-          <a><i class="far fa-heart fa-lg"></i> <span>Voyages</span></a>
+          <a><i class="far fa-bell fa-lg"></i> <span class="hidden-768">Alertes</span></a>
+          <a><i class="far fa-heart fa-lg"></i> <span class="hidden-768">Voyages</span></a>
         </nav>
-        <button>
+        <button id="login-button">
           <span>Connectez-vous</span>
         </button>
       </div>
@@ -48,7 +57,7 @@
 
       <!-- Title & Navigation bar -->
         <h1><span>Explorez</span> Paris</h1>
-        <!-- width > 1024px -->
+        <!-- width > 1328px -->
         <nav class="menu-main">
           <a><span>Conseils de voyages</span><i class="far fa-flag"></i></a>
           <a><span>Hôtels</span><i class="fas fa-bed"></i></a>
@@ -59,22 +68,7 @@
           ></a>
           <a><span>Restaurants</span><i class="fas fa-utensils"></i></a>
           <a><span>Forums de voyage</span><i class="far fa-window-restore"></i></a>
-          <a><span>Plus</span><i class="fas fa-ellipsis-h"></i></a>
-        </nav>
-        <!-- 7769px < width < 1024px -->
-        <nav class="menu-main responsive-1024">
-          <a><span>Conseils de voyages</span><i class="far fa-flag"></i></a>
-          <a><span>Hôtels</span><i class="fas fa-bed"></i></a>
-          <a><span>Location de vacances</span><i class="fas fa-home"></i></a>
-          <a
-            ><span>Activités</span></i
-            ><i class="far fa-bookmark"></i
-          ></a>
-        </nav>
-        <nav class="menu-main">
-          <a><span>Restaurants</span><i class="fas fa-utensils"></i></a>
-          <a><span>Forums de voyage</span><i class="far fa-window-restore"></i></a>
-          <a><span>Vols</span><i class="far fa-window-restore"></i></a>
+          <a class="hidden-wide"><span>Vols</span><i class="far fa-window-restore"></i></a>
           <a><span>Plus</span><i class="fas fa-ellipsis-h"></i></a>
         </nav>
 
@@ -123,7 +117,10 @@
               <span>Créez un voyage</span>
             </button>
           </div>
-          <img src="./assets/img/map.png" alt="" />
+          <div class = "description-picture">
+
+          </div>
+          <!-- <img src="./assets/img/map.png" alt="" /> -->
         </div>
       
       </section>
