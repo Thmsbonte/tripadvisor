@@ -69,7 +69,7 @@ $.addEventListener("DOMContentLoaded", () => {
     };
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/login",
+        "https://thmsbonte-tripadvisor-backend.herokuapp.com/user/login",
         data
       );
       if (response.status === 200) {
@@ -118,7 +118,7 @@ $.addEventListener("DOMContentLoaded", () => {
     };
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/signup",
+        "https://thmsbonte-tripadvisor-backend.herokuapp.com/user/signup",
         data
       );
       if (response.status === 200) {
