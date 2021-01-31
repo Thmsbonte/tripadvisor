@@ -32,7 +32,16 @@
   }
 }
 
+@media (max-width: 1150px) {
+  header form {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1024px) {
+  .hidden-1024 {
+    display: none;
+  }
   .description {
     display: flex;
     flex-direction: column;
@@ -66,9 +75,6 @@
 }
 
 @media (max-width: 768px) {
-  .hidden-768 {
-    display: none;
-  }
   #section1-pictures {
     height: 276px;
   }
@@ -95,5 +101,15 @@
 
   .carousel-picture {
     height: 150px;
+  }
+
+  .traveler-guide {
+    flex-direction: column;
+  }
+
+  .traveler-guide .block {
+    margin-bottom: 30px;
+    align-items: center;
+    width: 100%;
   }
 }

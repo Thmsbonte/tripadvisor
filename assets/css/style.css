@@ -207,7 +207,7 @@ header {
 header form {
   border: 2px solid #e0e0e0;
   height: 36px;
-  width: 100%;
+  width: 350px;
   border-radius: 7px;
   padding-left: 10px;
 }
@@ -814,7 +814,7 @@ main nav a:hover {
   border-radius: 50%;
   height: 72px;
   top: 190px;
-  left: 162px;
+  left: calc(50% - 36px);
 }
 
 .traveler-guide .block > img:hover {
