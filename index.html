@@ -9,7 +9,10 @@
       src="https://kit.fontawesome.com/3ceb7f9659.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/cookie.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="./assets/img/favicon-tripadvisor.svg" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
@@ -20,12 +23,49 @@
     <title>Tripadvisor</title>
   </head>
   <body>
+    
     <!-- MODAL -->
     <div class="modal hidden">
-      <form action="submit">
-        <i class="fas fa-times fa-lg" id="close-login-form"></i>
-      </form>
+      <div class="login-modal-page hidden">
+        <div><i class="fas fa-times fa-lg" id="close-login-form"></i></div>
+        <form id="login-form" action="submit">
+          <img src="./assets/img/Tripadvisor_logo2.svg" alt="logo-tripadvisor">
+          <h6>Bienvenue ; connectez-vous !</h6>
+          <p>Adresse E-mail :</p>
+          <input type="mail" name="login-mail" id="login-mail" placeholder="Votre E-mail" value="thomas@bonte"> <br>
+          <p>Mot-de-passe :</p>
+          <input type="password" name="login-password" id="login-password"> <br>
+          <button >Connexion</button>
+          <p>Vous n'avez pas de compte ? <a id="signup-link" href="#">Inscription</a></p>
+        </form>
+      </div>
+      <div class="signup-modal-page hidden">
+        <div><i class="fas fa-times fa-lg" id="close-signup-form"></i></div>
+        <form id="signup-form" action="submit">
+          <img src="./assets/img/Tripadvisor_logo2.svg" alt="logo-tripadvisor">
+          <h6>Inscrivez-vous : c'est gratuit !</h6>
+          <p>Username:</p>
+          <input type="text" name="signup-username" id="signup-username" placeholder="Votre username" value="Thomas"> <br>
+          <p>Adresse E-mail :</p>
+          <input type="mail" name="signup-mail" id="signup-mail" placeholder="Votre E-mail" value="thomas@bonte"> <br>
+          <p>Créez un mot-de-passe :</p>
+          <input type="password" name="signup-password" id="signup-password"> <br>
+          <p>Comment nous avez-vous connu ? :</p>
+          <textarea name="signup-message" id="signup-message" placeholder="Écrivez votre message ici ...">Je suis un message</textarea><br>
+          <button >Connexion</button>
+          <p>Vous avez déjà un compte ? <a id="login-link"href="#">Connexion</a></p>
+        </form>
+      </div>
+      <div class="signup-successfull hidden">
+        <i class="fas fa-check-circle fa-2x"></i>
+        <p>Inscription réussie ! Bienvenue.</p>
+      </div>
+      <div class="login-successfull hidden">
+        <i class="fas fa-check-circle fa-2x"></i>
+        <p>Connexion réussie !</p>
+      </div>
     </div>
+
     <!-- HEADER -->
     <header class="container">
       <div id="header-left">
@@ -48,6 +88,12 @@
         </nav>
         <button id="login-button">
           <span>Connectez-vous</span>
+        </button>
+        <button id="disconnect-button" class ="hidden">
+          <span>Bienvenu(e) <script>
+              document.write(readCookie("user"))
+          </script></span><br>
+          <a id="disconnect-link" href="#">Me déconnecter</a>
         </button>
       </div>
     </header>

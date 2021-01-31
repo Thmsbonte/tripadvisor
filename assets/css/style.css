@@ -27,21 +27,158 @@ a {
   justify-content: center;
 }
 
-.modal form {
-  height: 500px;
-  width: 400px;
+.login-modal-page {
+  height: 650px;
+  width: 420px;
   background-color: white;
-  border-radius: 10px;
   opacity: 1;
-  margin-top: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  margin-top: 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-.modal form i {
+.login-modal-page a:hover {
+  text-decoration: underline;
+}
+
+.login-modal-page img {
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.login-modal-page > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-modal-page div i {
   padding: 20px;
   cursor: pointer;
+}
+
+.login-modal-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 35px;
+}
+
+.login-modal-page p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.login-modal-page h6 {
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+.login-modal-page input,
+.login-modal-page textarea {
+  border: 2px solid #e0e0e0;
+  height: 40px;
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 7px;
+}
+
+.login-modal-page button {
+  border: none;
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+.signup-modal-page {
+  height: 650px;
+  width: 420px;
+  background-color: white;
+  opacity: 1;
+  margin-top: 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.signup-modal-page a:hover {
+  text-decoration: underline;
+}
+
+.signup-modal-page img {
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.signup-modal-page > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signup-modal-page div i {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.signup-modal-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 35px;
+}
+
+.signup-modal-page p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.signup-modal-page h6 {
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: 100;
+}
+
+.signup-modal-page input,
+.signup-modal-page textarea {
+  border: 2px solid #e0e0e0;
+  height: 40px;
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 7px;
+}
+
+.signup-modal-page button {
+  border: none;
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+.login-successfull {
+  height: 200px;
+  width: 420px;
+  background-color: white;
+  opacity: 1;
+  margin-top: 120px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-successfull i {
+  color: green;
+  margin-top: 30px;
+}
+
+.login-successfull p {
+  margin: 30px auto;
 }
 
 .hidden {
@@ -138,11 +275,16 @@ header button {
   background-color: black;
   border-radius: 50px;
   color: white;
-  width: 150px;
+  width: 170px;
 }
 
 header button:hover {
   background-color: #333333;
+  cursor: pointer;
+}
+
+header button a {
+  color: #999999;
   cursor: pointer;
 }
 
